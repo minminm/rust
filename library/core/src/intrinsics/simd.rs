@@ -257,8 +257,8 @@ extern "platform-intrinsic" {
     /// type).
     ///
     /// `mask` must only contain `0` or `!0` values.
-    #[cfg(not(bootstrap))]
-    pub fn simd_masked_load<V, U, T>(mask: V, ptr: U, val: T) -> T;
+    // #[cfg(not(bootstrap))]
+    // pub fn simd_masked_load<V, U, T>(mask: V, ptr: U, val: T) -> T;
 
     /// Write to a vector of pointers.
     ///
@@ -277,8 +277,8 @@ extern "platform-intrinsic" {
     /// type).
     ///
     /// `mask` must only contain `0` or `!0` values.
-    #[cfg(not(bootstrap))]
-    pub fn simd_masked_store<V, U, T>(mask: V, ptr: U, val: T);
+    // #[cfg(not(bootstrap))]
+    // pub fn simd_masked_store<V, U, T>(mask: V, ptr: U, val: T);
 
     /// Add two simd vectors elementwise, with saturation.
     ///

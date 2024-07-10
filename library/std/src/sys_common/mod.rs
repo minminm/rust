@@ -46,6 +46,7 @@ cfg_if::cfg_if! {
     if #[cfg(any(
         all(unix, not(target_os = "l4re")),
         windows,
+        // target_os = "ruxos",
         target_os = "hermit",
         target_os = "solid_asp3"
     ))] {

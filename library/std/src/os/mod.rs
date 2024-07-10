@@ -60,7 +60,7 @@ pub mod windows {}
         all(target_vendor = "fortanix", target_env = "sgx")
     )
 )))]
-#[cfg(all(not(target_os = "hermit"), any(unix, doc)))]
+#[cfg(all(not(target_os = "hermit"), not(target_os = "ruxos"), any(unix, doc)))]
 pub mod unix;
 
 // linux
@@ -117,6 +117,8 @@ pub mod fuchsia;
 pub mod haiku;
 #[cfg(target_os = "hermit")]
 pub mod hermit;
+#[cfg(target_os = "ruxos")]
+pub mod ruxos;
 #[cfg(target_os = "horizon")]
 pub mod horizon;
 #[cfg(target_os = "hurd")]

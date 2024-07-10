@@ -35,7 +35,7 @@ cfg_if::cfg_if! {
     if #[cfg(target_os = "emscripten")] {
         #[path = "emcc.rs"]
         mod real_imp;
-    } else if #[cfg(target_os = "hermit")] {
+    } else if #[cfg(any(target_os = "hermit", target_os = "ruxos"))] {
         #[path = "hermit.rs"]
         mod real_imp;
     } else if #[cfg(target_os = "l4re")] {
