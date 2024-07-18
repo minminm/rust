@@ -48,7 +48,6 @@ impl Thread {
 
     pub fn yield_now() {
         // api::task::ax_yield_now();
-        api::task::yield_now();
     }
 
     pub fn set_name(_name: &CStr) {
@@ -57,7 +56,6 @@ impl Thread {
 
     pub fn sleep(dur: Duration) {
         // api::task::ax_sleep_until(api::time::ax_current_time() + dur);
-        api::task::sleep_until(api::current_time() + dur);
     }
 
     pub fn join(self) {

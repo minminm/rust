@@ -111,6 +111,9 @@ rustc-std-workspace-core = { path = 'library/rustc-std-workspace-core' }
 rustc-std-workspace-alloc = { path = 'library/rustc-std-workspace-alloc' }
 rustc-std-workspace-std = { path = 'library/rustc-std-workspace-std' }
 toml_edit = { path = "../../crates/toml/crates/toml_edit" }
+ahash = { path = "../../crates/aHash" }
+getrandom = { path = "../../crates/getrandom" }
+
 
 [patch."https://github.com/rust-lang/rust-clippy"]
 clippy_lints = { path = "src/tools/clippy/clippy_lints" }
